@@ -1,0 +1,23 @@
+/* bg-icons */ 
+
+.bg-service {
+	background-image: url(../sys_img/icon/service.svg) !important;
+}
+.bg-cutllery {
+	background-image: url(../sys_img/icon/cutlery.svg) !important;
+}
+.bg-snorkle {
+	background-image: url(../sys_img/icon/snorkle.svg) !important;
+}
+.bg-ice {
+	background-image: url(../sys_img/icon/Ice.svg) !important;
+}
+.bg-poins {
+	background-image: url(../sys_img/icon/points.svg) !important;
+}
+
+/* bg-img */ 
+
+.bg-show-food {
+	background-image: url(../sys_img/img/show_food.jpg) !important;
+}

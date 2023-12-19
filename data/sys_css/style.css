@@ -1,5 +1,5 @@
 @import 'constants.css';
-
+@import 'background.css';
 
 /* CSS-Start Pascal aka Rescal*/
 /* Mobile Section*/
@@ -436,11 +436,16 @@ dd {
 	background-position: 50% 130%;
 	background-repeat: no-repeat;
 	position: relative;
-	margin: calc(-1 * var(--borderradius)) 0;
 	z-index: -1;
 }
 
-.full-img::before, .full-img::after{
+.curve-cut, .curve-cut-reverse{
+	padding: calc(-1 * var(--borderradius)) 0;
+}
+
+.curve-cut::before, .curve-cut::after,
+.curve-cut-reverse::before, .curve-cut-reverse::after
+{
 	content: '';
 	position: absolute;
 	display: block;
@@ -449,20 +454,32 @@ dd {
 	width:100%;
 }
 
-.full-img::before {
+.curve-cut::before {
 	top:0;
 	left:0;
 	border-radius:0 0 var(--borderradius) 0;
 }
 
 
-.full-img::after {
+.curve-cut::after {
 	bottom:-1px;
 	left:0;
 	border-radius:var(--borderradius) 0 0 0;
 }
 
-.full-img-ramps {
+.curve-cut-reverse::before {
+	top:0;
+	left:0;
+	border-radius:0 0 0 var(--borderradius);
+}
+
+.curve-cut-reverse::after {
+	bottom:-1px;
+	left:0;
+	border-radius:0 var(--borderradius) 0 0;
+}
+
+.curve-cut-ramps, .curve-cut-reverse-ramps{
 	width: 100%;
 	height: 100%;
 	border: 0;
@@ -471,8 +488,11 @@ dd {
 }
 
 
-.full-img-ramps::after, 
-.full-img-ramps::before {
+.curve-cut-ramps::after, 
+.curve-cut-ramps::before,
+.curve-cut-reverse-ramps::after, 
+.curve-cut-reverse-ramps::before
+{
 	content: '';
 	position:absolute;
 	width: var(--borderradius);
@@ -485,16 +505,28 @@ dd {
 
 }
 
-.full-img-ramps::after {
+.curve-cut-ramps::after {
 	top:calc(var(--borderradius) - 1px);
 	left:-1px;
 	transform: rotate(180deg);
 }
 
-.full-img-ramps::before{
+.curve-cut-ramps::before{
 	bottom:calc(var(--borderradius) - 2px);
 	right:-1px;
 	transform: rotate(0);
+}
+
+.curve-cut-reverse-ramps::after {
+	bottom:calc(var(--borderradius) - 1px);
+	left:-1px;
+	transform: rotate(90deg);
+}
+
+.curve-cut-reverse-ramps::before{
+	top:calc(var(--borderradius) - 1px);
+	right:0;
+	transform: rotate(-90deg);
 }
 /* Facts */
 .facts p{
@@ -574,13 +606,14 @@ dd {
 	display: grid; 
 	grid-template-columns: repeat(2, 1fr);
  
-	grid-template-rows: 1fr 1fr 1fr; 
-	gap: 20px 20px; 
+	grid-template-rows: 2.5fr 1fr 1fr; 
+	grid-auto-flow: column;
+	gap: 25px 25px; 
 	grid-template-areas: 
     "test test"
     "test1 test2"
     "test3 test4"; 
-	height: 200px;
+	height: initial;
   }
 
   .showcase-grid > a {
@@ -591,25 +624,30 @@ dd {
 
 .showcase-1 { 
 	grid-area: test;
-	background-color: red;
 	position: relative;
 	
 }
 .showcase-2 {
 	grid-area: test1;
-	background-color: rgb(255, 25, 220);
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/showcase_1.jpg) ;
+	background-position: center;
+	background-size: cover;
 }
 .showcase-3 { 
 	grid-area: test2; 
-	background-color: rgb(186, 218, 45);
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/showcase_2.jpg);
+	background-position: center;
+	background-size: cover;
 }
 .showcase-4 { 
 	grid-area: test3;
-	background-color: rgb(77, 169, 54);
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/showcase_3.jpg);
+	background-position: center;
+	background-size: cover;
 }
 .showcase-5 {
 	grid-area: test4; 
-	background-color: rgb(69, 16, 116);
+	background-color: var(--main);
 } 
 
 .showcase-1-background {
@@ -632,8 +670,9 @@ dd {
 	border-bottom-right-radius: 40px;
 	border-bottom-left-radius: 40px;
 	background-color: var(--white);
-	padding: 40px 40px 130px;
-
+	padding: 25px 20px 130px;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .showcase-1::after {
@@ -651,25 +690,103 @@ dd {
 
 .showcase-1-text h4{
 	color: var(--black);
-	font-size: ;
+	font-size: 1.5rem;
 	letter-spacing: 2px;
 	font-weight: 600;
 }
 
-.blue-icon {
+.showcase-1-text p{
+	color: var(--black);
+	font-size:  1rem;
+	letter-spacing: 2px;
+	font-weight: 300;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-line-clamp: 3; /* number of lines to show */
+	line-clamp: 3;
+ 	-webkit-box-orient: vertical; 
+	 display:-webkit-box;
+	 margin-bottom: 0;
+}
+
+.showcase-1-text button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	border-bottom-right-radius: 40px;
+	border-bottom-left-radius: 0;
+}
+
+.showcase-box {
 	padding: 20px;
+	text-decoration: none;
+	position: relative;
+	transition: all ease-in-out 0.2s;
+	
+
+}
+
+.showcase-box:hover, .showcase-box-big:hover {
+	transform: scale(1.06);
+	transition: all ease-in-out 0.2s;
+	
+}
+
+
+.showcase-box-big {
+	transition: all ease-in-out 0.2s;
+}
+
+
+.showcase-box h4 {
+	color: var(--white);
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.showcase-box p {
+	color: var(--white);
+	font-size:  1rem;
+	letter-spacing: 2px;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+.blue-icon {
+	padding: 10px;
 	background-color: var(--main);
 	height:0px;
 	width:0px;
 	display: inline-block;
 	border-radius: 15px;
-	height: 61px;
-	width:61px;
+	height: 41px;
+	width:41px;
 	box-sizing: content-box;
 	background-image: url(../sys_img/icon/logo_text_white.svg);
 	background-position: center;
-	background-size: 61px;
+	background-size: 41px 41px;
 	background-repeat: no-repeat;
+}
+/* companys */
+
+.companys {
+	background-color: var(--lightgrey);
+	position: relative;
+	padding-top: var(--borderradius);
+	padding-bottom: var(--borderradius);
+	z-index: -2;
+}
+
+
+
+
+.companys-img {
+	height:10vw;
+	min-height: 60px;
+	max-height: 177px;
+	width:auto;
 }
 
 /* Footer*/
@@ -839,105 +956,115 @@ dd {
 		font-size: 4rem;
 	}
 
-
+	/* showcase */
+	.showcase-box {
+		padding: 30px;
+	}
 	
+	.showcase-1-text {
+
+		padding: 30px 30px 130px;
+
+	}
+	
+
 }
 
 
 
 /* LG*/
 @media only screen and (min-width: 1024px) {
-		/*Nav*/
-		#offcanvasNavbar {
-			position: initial;
-			max-width: initial;
-			display: contents
-		}
+	/*Nav*/
+	#offcanvasNavbar {
+		position: initial;
+		max-width: initial;
+		display: contents
+	}
+
+	#offcanvasNavbar::before {
+		display: none;
+		content:none;
+	}
+
+	.offcanvas .container-social-logos {
+		padding-top: 6px;
+	}
+	.navbar-expand-lg .offcanvas .offcanvas-body {
+		padding-top: 6px;
+	}
 	
-		#offcanvasNavbar::before {
-			display: none;
-			content:none;
+
+	.navbar::after {
+		position: initial;
+		max-width: inherit;
+	}
+
+	.navbar-nav a {
+		border:none;
+		padding: 0;
+		white-space: nowrap;
+		
+	}
+
+	.navbar-brand {
+		width: 58px;
+		height: 64px;
+		background-image: url(../sys_img/icon/logo_small-01.svg);
+		background-size: contain;
+		background-position: left center;
+		padding: 0;
+		background-repeat: no-repeat;
+		margin-bottom: 5px;
+		text-indent: -9999999px;
+		white-space: nowrap;
+		position: relative;
 		}
 
-		.offcanvas .container-social-logos {
-			padding-top: 6px;
+
+
+	.posi
+
+		.navbar-nav {
+		max-width: 605px;
+		padding-top: 6px;
+		width: 605px;
 		}
-		.navbar-expand-lg .offcanvas .offcanvas-body {
-			padding-top: 6px;
+
+		.navbar {
+		padding: 15px 0 21px 0;
 		}
-		
-	
-		.navbar::after {
-			position: initial;
-			max-width: inherit;
-		}
-	
+
 		.navbar-nav a {
-			border:none;
-			padding: 0;
-			white-space: nowrap;
-			
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: initial;
+		font-weight: 500;
 		}
+
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+
+	/* Fleet */
+	.number-stats dl{
+		font-size: 80px;
+
+	}
+
+	/* Form */
+
+	.form-style {
+		font-size:18px;
+	}
 	
-		.navbar-brand {
-			width: 58px;
-			height: 64px;
-			background-image: url(../sys_img/icon/logo_small-01.svg);
-			background-size: contain;
-			background-position: left center;
-			padding: 0;
-			background-repeat: no-repeat;
-			margin-bottom: 5px;
-			text-indent: -9999999px;
-			white-space: nowrap;
-			position: relative;
-		  }
-
-
-
-		.posi
 	
-		  .navbar-nav {
-			max-width: 605px;
-			padding-top: 6px;
-			width: 605px;
-		  }
 	
-		  .navbar {
-			padding: 15px 0 21px 0;
-		  }
 	
-		  .navbar-nav a {
-			font-size: 12px;
-			text-transform: uppercase;
-			letter-spacing: initial;
-			font-weight: 500;
-		  }
-
-		.navbar-expand-lg .navbar-nav .nav-link {
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-
-
-		/* Fleet */
-		.number-stats dl{
-			font-size: 80px;
-
-		}
-
-		/* Form */
-
-		.form-style {
-			font-size:18px;
-		}
-		
-		
-		
-		
-		.form-style input, .form-style textarea{
-			font-size: 18px;
-		}
+	.form-style input, .form-style textarea{
+		font-size: 18px;
+	}
 
 	/* Showcase */
 	.showcase-grid {
@@ -948,8 +1075,66 @@ dd {
 		grid-template-areas: 
 		"test test1 test2"
 		"test test3 test4"; 
-		height: 818px;
+
  	 }
+
+	  .showcase-1-text {
+		padding: 40px 40px 130px;
+	}
+
+	  .showcase-1-text h4{
+		color: var(--black);
+		font-size: 36px;
+		letter-spacing: 2px;
+		font-weight: 600;
+	}
+	
+	.showcase-1-text p{
+		color: var(--black);
+		font-size:  24px;
+		letter-spacing: 2px;
+		font-weight: 300;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		-webkit-line-clamp: 3; /* number of lines to show */
+		line-clamp: 3;
+		 -webkit-box-orient: vertical; 
+		 display:-webkit-box;
+		 margin-bottom: 0;
+	}
+	.showcase-box {
+		padding: 40px;
+	}
+	
+	.showcase-box h4 {
+		color: var(--white);
+		font-size: 36px;
+		letter-spacing: 2px;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	
+	.showcase-box p {
+		font-size:  24px;
+	}
+	
+	.blue-icon {
+		padding: 20px;
+		background-color: var(--main);
+		height:0px;
+		width:0px;
+		display: inline-block;
+		border-radius: 15px;
+		height: 61px;
+		width:61px;
+		box-sizing: content-box;
+		background-image: url(../sys_img/icon/logo_text_white.svg);
+		background-position: center;
+		background-size: 61px 61px;
+		background-repeat: no-repeat;
+	}
+
+	
 
 	/* teaser */
 	.teaser.subsite {
