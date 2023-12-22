@@ -177,6 +177,16 @@ button , button:active , button:focus {
 .spacer-b-2 {
 	margin-bottom: calc(var(--spacer) * 2);
 }
+
+.spacer-borderradius-b {
+	margin-bottom: calc(var(--borderradius) / 2);
+}
+
+
+.spacer-borderradius-t {
+	margin-top: calc(var(--borderradius) / 2);
+}
+
 /* Utility */
 
 .w-100-percent {
@@ -373,34 +383,36 @@ a:hover {
 		}
 	
 		.p-spacer-2 {
-			padding-top: 13rem;/* changed */
-			padding-bottom: 13rem;/* changed */
+			padding-top: 10rem;/* changed */
+			padding-bottom: 10rem;/* changed */
 		}
 		.spacer-2 {
-			margin-top: 13rem;/* changed */
-			margin-bottom:13rem;/* changed */
+			margin-top: 10rem;/* changed */
+			margin-bottom:10rem;/* changed */
 		}
 	
 		.p-spacer-t-2 {
-			padding-top: 13rem;/* changed */
+			padding-top: 10rem;/* changed */
 		}
 	
 	
 		.p-spacer-b-2 {
-			padding-bottom: 13rem;/* changed */
+			padding-bottom: 10rem;/* changed */
 		}
 	
 		.spacer-b-2 {
-			margin-bottom: 13rem;
+			margin-bottom: 10rem;
 		}
 
 		.curve-cut-spacing-fixer-b {
-			margin-bottom: -8rem;		
+			margin-bottom: calc(var(--borderradius) / 2 * -1);		
 		}
 		
 		.curve-cut-spacing-fixer-t {
-			margin-top: -8rem;	
+			margin-top: calc(var(--borderradius) / 2 * -1);	
 		}
+		
+
 		
 	
 	
