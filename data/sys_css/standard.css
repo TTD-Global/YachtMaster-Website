@@ -42,7 +42,8 @@ h2 {
 
 
 h3 {
-	
+	font-size: 2rem;
+	font-weight: 700;
 }
 
 h4 {
@@ -73,7 +74,13 @@ em {
 }
 */
 
+.serif {
+	font-family: var(--serif);
+}
+.sans {
+	font-family: var(--sans);
 
+}
 
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b, h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-weight: 400;
@@ -243,6 +250,35 @@ a:hover {
 	background-color: var(--main_hover);
   }
 
+/* from bootstrap */
+
+.feature-icon {
+	width: 4rem;
+	height: 4rem;
+	border-radius: .75rem;
+  }
+  
+  .icon-square {
+	width: 3rem;
+	height: 3rem;
+	border-radius: .75rem;
+  }
+  
+  .text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+  .text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+  .text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+  
+  .card-cover {
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+  }
+  
+  .feature-icon-small {
+	width: 3rem;
+	height: 3rem;
+  }
+  
 
 /* SM */
 @media only screen and (min-width: 640px) {
@@ -283,7 +319,7 @@ a:hover {
 	
 	
 		h3 {
-			
+			font-size: 2rem;
 		}
 	
 		h4 {
