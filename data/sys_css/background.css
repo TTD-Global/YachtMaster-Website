@@ -23,5 +23,35 @@
 /* bg-img */ 
 
 .bg-show-food {
-	background-image: url(../sys_img/img/show_food.jpg) !important;
+	background-image: url(../sys_img/img/show_food.jpg);
 }
+
+.bg-fruits-image {
+	background-image:url(../sys_img/img/card_1.jpg);
+}
+.bg-shrimp-image {
+	background-image:url(../sys_img/img/card_2.jpg);
+}
+
+.bg-diving-image {
+	background-image:url(../sys_img/img/card_3.jpg);
+}
+
+.bg-cocktails-image {
+	background-image:url(../sys_img/img/card_4.jpg);
+}
+
+.bg-shower-image {
+	background-image:url(../sys_img/img/card_5.jpg);
+}
+
+.bg-ice-image {
+	background-image:url(../sys_img/img/card_6.jpg);
+}
+.bg-softdrinks-image {
+	background-image:url(../sys_img/img/card_7.jpg);
+}
+
+
+/* card-img */ 
+
