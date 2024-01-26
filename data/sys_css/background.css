@@ -34,7 +34,7 @@
 }
 
 .bg-diving-image {
-	background-image:url(../sys_img/img/card_3.jpg);
+	background-image:url(../sys_img/img/card_8.jpg);
 }
 
 .bg-cocktails-image {
@@ -50,6 +50,10 @@
 }
 .bg-softdrinks-image {
 	background-image:url(../sys_img/img/card_7.jpg);
+}
+
+.bg-scuba-image {
+	background-image:url(../sys_img/img/card_3.jpg);
 }
 
 

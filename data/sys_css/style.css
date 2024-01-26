@@ -243,6 +243,12 @@ p span , h2 span , h3 span{
 	border-top: solid 1px #F9F9F9;
 }
 
+.navbar-nav a:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	text-decoration-thickness: 3px;
+	text-decoration-color: var(--main);
+}
 
 .offcanvas .container-social-logos {
 	padding-top: 0px;
@@ -315,7 +321,7 @@ dd {
 	height:100vh;
 	border-radius:0 0 0 var(--borderradius) ;
 	position: relative;
-	background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(207,207,207,0) 68%, rgba(23,23,23,1) 100%);
+	background-image: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(207,207,207,0) 75%, rgba(23,23,23,1) 100%)/*,url("../sys_img/img/full_page.jpg")*/;
 	background-position:center;
 	background-repeat:no-repeat;
 	background-size:cover;
@@ -452,13 +458,15 @@ dd {
 #Fleet_Carousel {
 	padding-right:15px;
 }
+
+/*
 .carousel-indicators button:nth-child(even) {
 	border-radius: 100% 0%;
 }
 .carousel-indicators button:nth-child(odd) {
 	border-radius:  0% 100%;
 }
-
+*/
 .carousel-indicators [data-bs-target] {
 	background-color: var(--grey);
 	height:4px;
@@ -721,7 +729,7 @@ dd {
 	background-color: gray;
 	border-top-right-radius: 40px;
 	border-top-left-radius: 40px;
-	background-image: url(../sys_img/test.jpg);
+	background-image: url(../sys_img/img/show_food.jpg);
 	background-position: center;
 	background-size: cover;
 }
@@ -860,8 +868,8 @@ dd {
 }
 
 .card-text {
-	font-size: min(max(12px, 2vw), 16px);
-
+	font-size: min(max(12px, 2vw), 24px);
+	line-height: 1.5;
 
 }
 
@@ -1336,6 +1344,11 @@ dd {
 	.list-group.contact-info * {
 		text-transform: initial !important;
 		
+	}
+
+	.footer .list-group a:hover {
+		text-decoration: underline;
+		text-underline-offset: 3px;
 	}
 
 	/* full img*/

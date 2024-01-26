@@ -198,6 +198,26 @@ button , button:active , button:focus {
 	margin-bottom: calc(var(--spacer) * 2);
 }
 
+
+.p-spacer-t-3 {
+	padding-top: calc(var(--spacer) * 3);
+}
+
+.spacer-t-3 {
+	margin-top: calc(var(--spacer) * 3);
+}
+
+.p-spacer-b-3 {
+	padding-bottom: calc(var(--spacer) * 3);
+}
+
+.spacer-b-3 {
+	margin-bottom: calc(var(--spacer) * 3);
+}
+
+
+
+
 .spacer-borderradius-b {
 	margin-bottom: calc(var(--borderradius) / 2);
 }
@@ -361,9 +381,10 @@ a:hover {
 	
 		h1 {
 			font-size: 6rem;
-			letter-spacing: 6rem;
+			letter-spacing: 3rem;
 			font-weight: 900;
 			padding-left: 6rem;
+			/*text-shadow: 9px 9px 0px rgba(0,0,0,0.81);*/
 		}
 	
 		h2 {
@@ -450,6 +471,23 @@ a:hover {
 		.spacer-b-2 {
 			margin-bottom: 12rem;
 		}
+
+		.p-spacer-t-3 {
+			padding-top: calc(var(--spacer) * 6);
+		}
+		
+		.spacer-t-3 {
+			margin-top: calc(var(--spacer) * 6);
+		}
+		
+		.p-spacer-b-3 {
+			padding-bottom: calc(var(--spacer) * 6);
+		}
+		
+		.spacer-b-3 {
+			margin-bottom: calc(var(--spacer) * 6);
+		}
+		
 
 
 		
