@@ -317,6 +317,7 @@ dd {
 
 
 /* Teaser */
+
 .teaser {
 	height:100vh;
 	border-radius:0 0 0 var(--borderradius) ;
@@ -395,6 +396,13 @@ dd {
 
 }
 
+.teaser-text {
+	padding-bottom: 0px;
+}
+
+.teaser h1 {
+	margin-bottom:1rem;
+}
 
 .teaser h2 {
 	font-size: 12px;
@@ -402,6 +410,7 @@ dd {
 	text-transform:uppercase;
 	font-family: var(--sans);
 	letter-spacing: 1px;
+	
 }
 /*----------------------------------------------*/
 
@@ -702,7 +711,7 @@ dd {
 .showcase-2::before {
 
 	grid-area: test1;
-	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/showcase_1.jpg) ;
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/arrangement-delicious-exotic-fruits.jpg) ;
 	background-position: center;
 	background-size: cover;
 }
@@ -1271,7 +1280,10 @@ dd {
 	.teaser.subsite {
 		height:250px;
 	}
-		
+	
+	.teaser h2 {
+		font-size:1.3rem ;
+	}
 
 	
 }

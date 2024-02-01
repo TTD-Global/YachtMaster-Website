@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
 	font-size: 2.25rem;
-    letter-spacing: 2.25rem;
+    letter-spacing: 0.3rem;
 	font-weight: 900;
 	padding-left: 2.25rem;
 }
@@ -381,8 +381,8 @@ a:hover {
 	
 		h1 {
 			font-size: 6rem;
-			letter-spacing: 3rem;
-			font-weight: 900;
+			letter-spacing: 1rem;
+			font-weight: 600;
 			padding-left: 6rem;
 			/*text-shadow: 9px 9px 0px rgba(0,0,0,0.81);*/
 		}
