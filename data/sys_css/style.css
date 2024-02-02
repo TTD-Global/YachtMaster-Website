@@ -313,9 +313,28 @@ address {
 dd {
 	margin-bottom:0;
 }
+/*-------------- Legal ------------*/
+section.legal h1 {
+	font-size: 4rem;
+	padding-left: 0;
+	font-family: var(--sans);
+}
+
+section.legal h3, section.legal h4{
+	font-size: 2rem;
+}
+
+.legal h1, .legal h2,.legal h3, .legal h4{
+	padding-left: 0;
+	font-size: 3rem;
+	font-family: var(--sans);
+	letter-spacing: initial;
+	font-weight: 600;
+	margin-bottom: 2rem;
+	margin-top: 4rem;
+	
+}
 /*----------------------------------------------*/
-
-
 /* Teaser */
 
 .teaser {
