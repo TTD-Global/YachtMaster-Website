@@ -627,6 +627,13 @@ dd {
 	-webkit-box-orient: vertical; 
 }
 
+.line {
+	width:200px;
+	height:15px;
+	background-color:var(--main);
+	border-radius:3px;
+}
+
 
 /* Form-Contact */
 .form-style {
@@ -711,19 +718,19 @@ dd {
 .showcase-2::before {
 
 	grid-area: test1;
-	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/arrangement-delicious-exotic-fruits.jpg) ;
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/IMG_4295-2.jpg) ;
 	background-position: center;
 	background-size: cover;
 }
 .showcase-3::before { 
 	grid-area: test2; 
-	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/showcase_2.jpg);
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/IMG_4218.jpg);
 	background-position: center;
 	background-size: cover;
 }
 .showcase-4::before { 
 	grid-area: test3;
-	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/showcase_3.jpg);
+	background: linear-gradient(0deg, rgba(0,0,0,0.71) 4%, rgba(0,0,0,0) 100%), url(../sys_img/img/card_2.jpg);
 	background-position: center;
 	background-size: cover;
 }
