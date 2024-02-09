@@ -1085,9 +1085,26 @@ section.legal h3, section.legal h4{
 .splide__slide img {
 	width: 100%;
 	height: auto;
-	padding:0 15px
-  }
-/* Own media querry */
+	
+	
+	border-radius: 15px;
+}
+.splide__slide {
+	padding: 0 15px;
+}
+
+.splide__arrow svg {
+	fill:var(--lightgrey);
+}
+
+.splide__arrow:hover:not(:disabled) svg {
+	fill:var(--main);
+}
+
+.splide__pagination__page.is-active{
+	background-color: var(--main);
+}
+/* Ownmedia querry */
 @media only screen and (min-width: 375px) {
 	#offcanvasNavbar {
 		max-width:300px;
