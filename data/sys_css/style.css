@@ -897,13 +897,13 @@ section.legal h3, section.legal h4{
 }
 /* Service Card */
 .card-title {
-	font-size: min(max(18px, 3vw), 36px);
+	font-size: min(max(18px, 3vw), 30px);
 	font-family: var(--sans);
 
 }
 
 .card-text {
-	font-size: min(max(12px, 2vw), 24px);
+	font-size: min(max(12px, 2vw), 18px);
 	line-height: 1.5;
 
 }
