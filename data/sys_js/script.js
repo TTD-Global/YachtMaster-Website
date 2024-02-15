@@ -7,7 +7,7 @@ $('.navbar-toggler').click(function(){
    
     type     : 'loop',
     focus    : 0,
-
+    pagination: false,
 		breakpoints: {
 			768: {
 				perPage: 1,
