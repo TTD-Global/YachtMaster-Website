@@ -5,7 +5,7 @@ $('.navbar-toggler').click(function(){
   new Splide( '#image-carousel', {
     perPage: 3,
    
-    type     : 'loop',
+
     focus    : 0,
     pagination: false,
 		breakpoints: {
@@ -14,3 +14,4 @@ $('.navbar-toggler').click(function(){
 			},
 		},
   } ).mount();
+
